@@ -578,7 +578,6 @@ button{
     }
 
 }
-
 </style>
 </head>
 
@@ -586,23 +585,15 @@ button{
 
 <div class="container">
 
-<!-- ======================================================
-HEADER
-====================================================== -->
+<!-- ================= HEADER ================= -->
 
 <div class="header">
 
-    <h3>
-        KEGIATAN PENGABDIAN KEPADA MASYARAKAT
-    </h3>
+    <h3>KEGIATAN PENGABDIAN KEPADA MASYARAKAT</h3>
 
-    <h1>
-        Game Proton & Neutron
-    </h1>
+    <h1>Game Proton & Neutron</h1>
 
-    <h2>
-        JUDUL PENGABDIAN DI SINI
-    </h2>
+    <h2>JUDUL PENGABDIAN DI SINI</h2>
 
     <div class="team">
 
@@ -621,10 +612,7 @@ HEADER
 
 </div>
 
-
-<!-- ======================================================
-INFO
-====================================================== -->
+<!-- ================= INFO ================= -->
 
 <div class="info-bar">
 
@@ -650,10 +638,7 @@ INFO
 
 </div>
 
-
-<!-- ======================================================
-LEVEL
-====================================================== -->
+<!-- ================= LEVEL ================= -->
 
 <div class="level-box">
 
@@ -661,47 +646,27 @@ LEVEL
 
     <div class="level-buttons">
 
-        <button
-            onclick="pilihLevel(1)"
-            id="level1"
-            class="active">
-
+        <button onclick="pilihLevel(1)" id="level1" class="active">
             Level 1
-
         </button>
 
-        <button
-            onclick="pilihLevel(2)"
-            id="level2">
-
+        <button onclick="pilihLevel(2)" id="level2">
             Level 2
-
         </button>
 
-        <button
-            onclick="pilihLevel(3)"
-            id="level3">
-
+        <button onclick="pilihLevel(3)" id="level3">
             Level 3
-
         </button>
 
-        <button
-            onclick="pilihLevel(4)"
-            id="level4">
-
+        <button onclick="pilihLevel(4)" id="level4">
             Level 4
-
         </button>
 
     </div>
 
 </div>
 
-
-<!-- ======================================================
-PETUNJUK
-====================================================== -->
+<!-- ================= PETUNJUK ================= -->
 
 <div class="instructions">
 
@@ -709,46 +674,25 @@ PETUNJUK
 
 <ol>
 
-<li>
-    🔴 Proton (+) = bilangan positif.
-</li>
+<li>🔴 Proton (+) = bilangan positif.</li>
 
-<li>
-    🔵 Neutron (−) = bilangan negatif.
-</li>
+<li>🔵 Neutron (−) = bilangan negatif.</li>
 
-<li>
-    <b>Seret satu partikel setiap kali</b>
-    ke papan.
-</li>
+<li><b>Seret satu partikel setiap kali</b> ke papan.</li>
 
-<li>
-    Jika soal memiliki 5 proton,
-    maka seret proton sebanyak 5 kali.
-</li>
+<li>Jika soal memiliki 5 proton, maka seret proton sebanyak 5 kali.</li>
 
-<li>
-    Jika terdapat proton dan neutron,
-    tekan <b>⚛️ Bentuk Pasangan Netral</b>.
-</li>
+<li>Jika terdapat proton dan neutron, tekan <b>⚛️ Bentuk Pasangan Netral</b>.</li>
 
-<li>
-    🔴 + 🔵 = 0
-</li>
+<li>🔴 + 🔵 = 0</li>
 
-<li>
-    Pasangan netral yang terbentuk
-    dapat diseret ke keranjang untuk dihapus.
-</li>
+<li>Pasangan netral yang terbentuk dapat diseret ke keranjang untuk dihapus.</li>
 
 </ol>
 
 </div>
 
-
-<!-- ======================================================
-SOAL
-====================================================== -->
+<!-- ================= SOAL ================= -->
 
 <div class="question">
 
@@ -756,134 +700,91 @@ SOAL
         Selesaikan operasi berikut:
     </div>
 
-    <div
-        class="question-expression"
-        id="question">
-
+    <div class="question-expression" id="question">
         5 + (−2)
-
     </div>
 
 </div>
 
-
-<!-- ======================================================
-SUMBER PARTIKEL
-====================================================== -->
+<!-- ================= SUMBER ================= -->
 
 <div class="source-title">
-
     🎯 Seret SATU partikel setiap kali
-
 </div>
-
 
 <div class="sources">
 
+    <div class="source">
 
-<!-- PROTON ANGKA PERTAMA -->
+        <div class="source-label" id="labelA">
+            Angka Pertama
+        </div>
 
-<div class="source">
+        <div
+            id="sourceA"
+            class="drag-particle proton"
+            draggable="true"
+            ondragstart="dragAngkaPertama(event)"
+            ondragend="dragSelesai(event)"
+        >
+            +
+        </div>
 
-    <div
-        class="source-label"
-        id="labelA">
-
-        Angka Pertama
-
-    </div>
-
-    <div
-        id="sourceA"
-        class="drag-particle proton"
-        draggable="true"
-        ondragstart="dragAngkaPertama(event)">
-
-        +
-
-    </div>
-
-    <div
-        class="source-count"
-        id="countA">
-
-        Belum ditempatkan
+        <div class="source-count" id="countA">
+            Belum ditempatkan
+        </div>
 
     </div>
 
-</div>
 
+    <div class="source">
 
-<!-- NEUTRON / PARTIKEL ANGKA KEDUA -->
+        <div class="source-label" id="labelB">
+            Angka Kedua
+        </div>
 
-<div class="source">
+        <div
+            id="sourceB"
+            class="drag-particle neutron"
+            draggable="true"
+            ondragstart="dragAngkaKedua(event)"
+            ondragend="dragSelesai(event)"
+        >
+            −
+        </div>
 
-    <div
-        class="source-label"
-        id="labelB">
-
-        Angka Kedua
-
-    </div>
-
-    <div
-        id="sourceB"
-        class="drag-particle neutron"
-        draggable="true"
-        ondragstart="dragAngkaKedua(event)">
-
-        −
+        <div class="source-count" id="countB">
+            Belum ditempatkan
+        </div>
 
     </div>
 
-    <div
-        class="source-count"
-        id="countB">
 
-        Belum ditempatkan
+    <div class="source">
 
-    </div>
+        <div class="source-label">
+            Tambah 0
+        </div>
 
-</div>
+        <div
+            class="drag-particle"
+            style="background:#16a34a;font-size:22px;"
+            draggable="true"
+            ondragstart="dragPasanganNetral(event)"
+            ondragend="dragSelesai(event)"
+        >
+            +−
+        </div>
 
-
-<!-- TAMBAH NOL -->
-
-<div class="source">
-
-    <div class="source-label">
-
-        Tambah 0
-
-    </div>
-
-    <div
-        class="drag-particle"
-        style="
-            background:#16a34a;
-            font-size:22px;
-        "
-        draggable="true"
-        ondragstart="dragPasanganNetral(event)">
-
-        +−
-
-    </div>
-
-    <div class="source-count">
-
-        Pasangan netral
+        <div class="source-count">
+            Pasangan netral
+        </div>
 
     </div>
 
 </div>
 
-</div>
-
-
-<!-- ======================================================
-PAPAN
-====================================================== -->
+<!-- ================= PAPAN ================= -->
 
 <div class="board-wrapper">
 
@@ -895,14 +796,12 @@ PAPAN
 
         <button
             class="btn-neutral"
-            onclick="bentukPasanganNetral()">
-
+            onclick="bentukPasanganNetral()"
+        >
             ⚛️ Bentuk Pasangan Netral
-
         </button>
 
     </div>
-
 
     <div
         id="board"
@@ -910,81 +809,35 @@ PAPAN
         ondragover="allowBoardDrop(event)"
         ondrop="dropBoard(event)"
     >
-
     </div>
-
-
-    <!-- STATUS PAPAN -->
 
     <div class="board-status">
 
         <div class="stat">
-
             Proton
-
-            <strong
-                class="red"
-                id="jumlahProton">
-
-                0
-
-            </strong>
-
+            <strong class="red" id="jumlahProton">0</strong>
         </div>
 
-
         <div class="stat">
-
             Neutron
-
-            <strong
-                class="blue"
-                id="jumlahNeutron">
-
-                0
-
-            </strong>
-
+            <strong class="blue" id="jumlahNeutron">0</strong>
         </div>
 
-
         <div class="stat">
-
             Pasangan Netral
-
-            <strong
-                class="green"
-                id="jumlahPasangan">
-
-                0
-
-            </strong>
-
+            <strong class="green" id="jumlahPasangan">0</strong>
         </div>
 
-
         <div class="stat">
-
             Nilai Papan
-
-            <strong
-                class="dark"
-                id="nilaiPapan">
-
-                0
-
-            </strong>
-
+            <strong class="dark" id="nilaiPapan">0</strong>
         </div>
 
     </div>
 
 </div>
 
-
-<!-- ======================================================
-KERANJANG
-====================================================== -->
+<!-- ================= KERANJANG ================= -->
 
 <div
     id="trash"
@@ -996,18 +849,13 @@ KERANJANG
     🗑️
 
     <div style="margin-left:10px">
-
         Seret partikel atau pasangan netral
         ke sini untuk menghapus
-
     </div>
 
 </div>
 
-
-<!-- ======================================================
-JAWABAN
-====================================================== -->
+<!-- ================= JAWABAN ================= -->
 
 <div class="answer-box">
 
@@ -1023,69 +871,57 @@ JAWABAN
         placeholder="Contoh: 3"
     >
 
-
     <div class="controls">
 
         <button
             class="btn-check"
-            onclick="cekJawaban()">
-
+            onclick="cekJawaban()"
+        >
             ✓ Cek Jawaban
-
         </button>
-
 
         <button
             class="btn-next"
-            onclick="soalBerikutnya()">
-
+            onclick="soalBerikutnya()"
+        >
             ➜ Soal Berikutnya
-
         </button>
-
 
         <button
             class="btn-reset"
-            onclick="resetPapan()">
-
+            onclick="resetPapan()"
+        >
             ↻ Reset Papan
-
         </button>
 
     </div>
 
 </div>
 
-
-<!-- STATUS -->
+<!-- ================= STATUS ================= -->
 
 <div
     id="status"
-    class="status info">
-
-    Silakan seret satu proton/neutron
-    ke papan.
-
+    class="status info"
+>
+    Silakan seret satu proton/neutron ke papan.
 </div>
 
-
-<!-- LOG -->
+<!-- ================= LOG ================= -->
 
 <div
     class="log"
-    id="log">
-
+    id="log"
+>
     &gt; Game dimulai...
-
 </div>
 
 </div>
-
 
 <script>
 
 /* =========================================================
-VARIABEL GAME
+   VARIABEL GAME
 ========================================================= */
 
 let level = 1;
@@ -1118,7 +954,7 @@ let gameSelesai = false;
 
 
 /* =========================================================
-LEVEL
+   LEVEL
 ========================================================= */
 
 const levelMax = {
@@ -1132,7 +968,7 @@ const levelMax = {
 
 
 /* =========================================================
-PILIH LEVEL
+   PILIH LEVEL
 ========================================================= */
 
 function pilihLevel(l){
@@ -1162,7 +998,7 @@ function pilihLevel(l){
 
 
 /* =========================================================
-RANDOM BILANGAN
+   RANDOM BILANGAN
 ========================================================= */
 
 function randomBilangan(max){
@@ -1175,7 +1011,7 @@ function randomBilangan(max){
 
 
 /* =========================================================
-BUAT SOAL
+   BUAT SOAL
 ========================================================= */
 
 function buatSoal(){
@@ -1185,34 +1021,24 @@ function buatSoal(){
     let max =
         levelMax[level];
 
-
     angkaA =
         randomBilangan(max);
-
 
     angkaB =
         randomBilangan(max);
 
-
     if(angkaA === 0){
-
         angkaA = 1;
-
     }
-
 
     if(angkaB === 0){
-
         angkaB = 1;
-
     }
-
 
     operator =
         Math.random() < 0.5
         ? "+"
         : "-";
-
 
     if(operator === "+"){
 
@@ -1227,7 +1053,6 @@ function buatSoal(){
 
     }
 
-
     tampilkanSoal();
 
     gameSelesai = false;
@@ -1236,7 +1061,7 @@ function buatSoal(){
 
 
 /* =========================================================
-FORMAT BILANGAN
+   FORMAT BILANGAN
 ========================================================= */
 
 function formatBilangan(n){
@@ -1255,7 +1080,7 @@ function formatBilangan(n){
 
 
 /* =========================================================
-TAMPILKAN SOAL
+   TAMPILKAN SOAL
 ========================================================= */
 
 function tampilkanSoal(){
@@ -1263,37 +1088,31 @@ function tampilkanSoal(){
     document
         .getElementById("question")
         .textContent =
-
         formatBilangan(angkaA)
         + " "
         + operator
         + " "
         + formatBilangan(angkaB);
 
-
     document
         .getElementById("infoLevel")
         .textContent =
         level;
-
 
     document
         .getElementById("infoSoal")
         .textContent =
         nomorSoal;
 
-
     document
         .getElementById("infoBenar")
         .textContent =
         benar;
 
-
     document
         .getElementById("infoSkor")
         .textContent =
         skor;
-
 
     document
         .getElementById("labelA")
@@ -1301,18 +1120,12 @@ function tampilkanSoal(){
         "Angka Pertama: " +
         formatBilangan(angkaA);
 
-
     document
         .getElementById("labelB")
         .textContent =
         "Angka Kedua: " +
         formatBilangan(angkaB);
 
-
-    /*
-       Tentukan warna sumber berdasarkan
-       tanda bilangannya.
-    */
 
     let sourceA =
         document.getElementById("sourceA");
@@ -1357,7 +1170,8 @@ function tampilkanSoal(){
 
 
 /* =========================================================
-DRAG ANGKA PERTAMA
+   DRAG ANGKA PERTAMA
+   SATU SERET = SATU PARTIKEL
 ========================================================= */
 
 function dragAngkaPertama(event){
@@ -1375,10 +1189,8 @@ function dragAngkaPertama(event){
 
     };
 
-
     event.dataTransfer.effectAllowed =
         "copy";
-
 
     event.dataTransfer.setData(
         "text/plain",
@@ -1389,7 +1201,8 @@ function dragAngkaPertama(event){
 
 
 /* =========================================================
-DRAG ANGKA KEDUA
+   DRAG ANGKA KEDUA
+   SATU SERET = SATU PARTIKEL
 ========================================================= */
 
 function dragAngkaKedua(event){
@@ -1407,10 +1220,8 @@ function dragAngkaKedua(event){
 
     };
 
-
     event.dataTransfer.effectAllowed =
         "copy";
-
 
     event.dataTransfer.setData(
         "text/plain",
@@ -1421,7 +1232,31 @@ function dragAngkaKedua(event){
 
 
 /* =========================================================
-DRAG PASANGAN NETRAL TAMBAHAN
+   DRAG SELESAI
+========================================================= */
+
+function dragSelesai(event){
+
+    /*
+       Data drag dikosongkan setelah
+       satu proses seret selesai.
+    */
+
+    dragData = null;
+
+    document
+        .getElementById("board")
+        .classList.remove("drag-over");
+
+    document
+        .getElementById("trash")
+        .classList.remove("drag-over");
+
+}
+
+
+/* =========================================================
+   DRAG PASANGAN NETRAL TAMBAHAN
 ========================================================= */
 
 function dragPasanganNetral(event){
@@ -1432,10 +1267,8 @@ function dragPasanganNetral(event){
 
     };
 
-
     event.dataTransfer.effectAllowed =
         "copy";
-
 
     event.dataTransfer.setData(
         "text/plain",
@@ -1446,7 +1279,7 @@ function dragPasanganNetral(event){
 
 
 /* =========================================================
-ALLOW DROP PAPAN
+   ALLOW DROP PAPAN
 ========================================================= */
 
 function allowBoardDrop(event){
@@ -1456,7 +1289,6 @@ function allowBoardDrop(event){
     event.dataTransfer.dropEffect =
         "copy";
 
-
     document
         .getElementById("board")
         .classList.add("drag-over");
@@ -1465,7 +1297,10 @@ function allowBoardDrop(event){
 
 
 /* =========================================================
-DROP KE PAPAN
+   DROP KE PAPAN
+
+   PENTING:
+   SATU KALI DROP = SATU PARTIKEL
 ========================================================= */
 
 function dropBoard(event){
@@ -1504,13 +1339,21 @@ function dropBoard(event){
         21;
 
 
-    /* ================================================
-       SATU PARTIKEL
-    ================================================= */
+    /* =====================================================
+       SATU PARTIKEL SAJA
+    ===================================================== */
 
     if(
         dragData.type === "particle"
     ){
+
+        /*
+           TIDAK ADA LOOP DI SINI.
+
+           Setiap satu kali drag/drop
+           hanya memanggil buatPartikel()
+           satu kali.
+        */
 
         buatPartikel(
 
@@ -1531,41 +1374,42 @@ function dropBoard(event){
         );
 
 
-        if(
-            dragData.sumber === "A"
-        ){
+        tulisLog(
 
-            tulisLog(
+            "> Satu " +
+            namaPartikel(
+                dragData.particleType
+            ) +
+            " dari angka " +
+            (
+                dragData.sumber === "A"
+                ? "pertama"
+                : "kedua"
+            ) +
+            " ditempatkan."
 
-                "> Satu " +
-                namaPartikel(
-                    dragData.particleType
-                ) +
-                " dari angka pertama ditempatkan."
+        );
 
-            );
 
-        }
-        else{
+        setStatus(
 
-            tulisLog(
+            "1 " +
+            namaPartikel(
+                dragData.particleType
+            ) +
+            " berhasil ditempatkan.",
 
-                "> Satu " +
-                namaPartikel(
-                    dragData.particleType
-                ) +
-                " dari angka kedua ditempatkan."
+            "info"
 
-            );
-
-        }
+        );
 
     }
 
 
-    /* ================================================
-       TAMBAH PASANGAN NETRAL
-    ================================================= */
+    /* =====================================================
+       TAMBAH NOL
+       SATU DRAG = SATU PASANGAN NETRAL
+    ===================================================== */
 
     else if(
         dragData.type === "zero"
@@ -1595,6 +1439,11 @@ function dropBoard(event){
     }
 
 
+    /*
+       Setelah drop selesai,
+       data drag langsung dihapus.
+    */
+
     dragData = null;
 
     updateBoard();
@@ -1603,7 +1452,7 @@ function dropBoard(event){
 
 
 /* =========================================================
-BUAT PARTIKEL
+   BUAT PARTIKEL
 ========================================================= */
 
 function buatPartikel(type,x,y){
@@ -1626,7 +1475,7 @@ function buatPartikel(type,x,y){
 
 
 /* =========================================================
-BUAT PASANGAN NETRAL TAMBAHAN
+   BUAT PASANGAN NETRAL TAMBAHAN
 ========================================================= */
 
 function buatPasanganNetral(x,y){
@@ -1645,7 +1494,7 @@ function buatPasanganNetral(x,y){
 
 
 /* =========================================================
-BENTUK PASANGAN NETRAL
+   BENTUK PASANGAN NETRAL
 ========================================================= */
 
 function bentukPasanganNetral(){
@@ -1769,7 +1618,7 @@ function bentukPasanganNetral(){
 
 
 /* =========================================================
-RENDER PAPAN
+   RENDER PAPAN
 ========================================================= */
 
 function renderBoard(){
@@ -1959,7 +1808,7 @@ function renderBoard(){
 
 
 /* =========================================================
-ALLOW DROP KERANJANG
+   ALLOW DROP KERANJANG
 ========================================================= */
 
 function allowTrashDrop(event){
@@ -1980,7 +1829,7 @@ function allowTrashDrop(event){
 
 
 /* =========================================================
-DROP KERANJANG
+   DROP KERANJANG
 ========================================================= */
 
 function dropTrash(event){
@@ -1994,10 +1843,6 @@ function dropTrash(event){
         .getElementById("trash")
         .classList.remove("drag-over");
 
-
-    /*
-       Ambil data drag.
-    */
 
     if(!dragData){
 
@@ -2023,7 +1868,6 @@ function dropTrash(event){
             };
 
         }
-
 
         else if(
             data.startsWith(
@@ -2068,21 +1912,12 @@ function dropTrash(event){
             );
 
 
-        /*
-           Hapus pasangan.
-        */
-
         pasangan =
             pasangan.filter(
                 pair =>
                 pair.id !== pairId
             );
 
-
-        /*
-           Hapus proton + neutron
-           yang membentuk pasangan.
-        */
 
         partikel =
             partikel.filter(
@@ -2092,18 +1927,13 @@ function dropTrash(event){
 
 
         tulisLog(
-
             "> 🗑️ Pasangan netral berhasil dihapus."
-
         );
 
 
         setStatus(
-
             "Pasangan netral berhasil dihapus.",
-
             "info"
-
         );
 
     }
@@ -2132,11 +1962,6 @@ function dropTrash(event){
 
         if(target){
 
-            /*
-               Jika partikel merupakan
-               bagian dari pasangan.
-            */
-
             if(
                 target.pairId !== null
             ){
@@ -2144,11 +1969,6 @@ function dropTrash(event){
                 let pairId =
                     target.pairId;
 
-
-                /*
-                   Hapus pasangan beserta
-                   kedua partikel.
-                */
 
                 pasangan =
                     pasangan.filter(
@@ -2204,7 +2024,7 @@ function dropTrash(event){
 
 
 /* =========================================================
-UPDATE PAPAN
+   UPDATE PAPAN
 ========================================================= */
 
 function updateBoard(){
@@ -2226,11 +2046,6 @@ function updateBoard(){
         ).length;
 
 
-    /*
-       Pasangan netral terdiri dari
-       satu proton + satu neutron.
-    */
-
     proton += pasangan.length;
 
     neutron += pasangan.length;
@@ -2241,33 +2056,25 @@ function updateBoard(){
 
 
     document
-        .getElementById(
-            "jumlahProton"
-        )
+        .getElementById("jumlahProton")
         .textContent =
         proton;
 
 
     document
-        .getElementById(
-            "jumlahNeutron"
-        )
+        .getElementById("jumlahNeutron")
         .textContent =
         neutron;
 
 
     document
-        .getElementById(
-            "jumlahPasangan"
-        )
+        .getElementById("jumlahPasangan")
         .textContent =
         pasangan.length;
 
 
     document
-        .getElementById(
-            "nilaiPapan"
-        )
+        .getElementById("nilaiPapan")
         .textContent =
         nilai > 0
         ? "+" + nilai
@@ -2280,23 +2087,10 @@ function updateBoard(){
 
 
 /* =========================================================
-JUMLAH SUMBER YANG SUDAH DIMASUKKAN
+   JUMLAH SUMBER
 ========================================================= */
 
 function updateJumlahSumber(){
-
-    /*
-       Hitung berdasarkan sumber A/B
-       yang sudah masuk ke papan.
-
-       Untuk partikel yang sudah berpasangan,
-       tetap dihitung sebagai bagian dari
-       A atau B berdasarkan jumlah total.
-    */
-
-    let totalA =
-        partikel.length;
-
 
     let targetA =
         Math.abs(angkaA);
@@ -2305,11 +2099,6 @@ function updateJumlahSumber(){
     let targetB =
         Math.abs(angkaB);
 
-
-    /*
-       Kita hanya menampilkan jumlah total
-       berdasarkan jenis partikel.
-    */
 
     let typeA =
         angkaA >= 0
@@ -2338,32 +2127,52 @@ function updateJumlahSumber(){
 
 
     /*
-       Pasangan yang sudah terbentuk
-       tidak perlu mengubah tampilan
-       sumber karena sumber adalah alat
-       untuk memasukkan partikel.
+       Jika A dan B mempunyai jenis partikel
+       yang sama, tampilkan jumlah total
+       yang ada di papan.
     */
 
-    document
-        .getElementById("countA")
-        .textContent =
-        "Target: " +
-        targetA +
-        " partikel";
+    if(typeA === typeB){
 
+        document
+            .getElementById("countA")
+            .textContent =
+            "Target: " +
+            targetA +
+            " partikel";
 
-    document
-        .getElementById("countB")
-        .textContent =
-        "Target: " +
-        targetB +
-        " partikel";
+        document
+            .getElementById("countB")
+            .textContent =
+            "Target: " +
+            targetB +
+            " partikel";
+
+    }
+
+    else{
+
+        document
+            .getElementById("countA")
+            .textContent =
+            "Target: " +
+            targetA +
+            " partikel";
+
+        document
+            .getElementById("countB")
+            .textContent =
+            "Target: " +
+            targetB +
+            " partikel";
+
+    }
 
 }
 
 
 /* =========================================================
-HITUNG NILAI PAPAN
+   HITUNG NILAI PAPAN
 ========================================================= */
 
 function hitungNilaiPapan(){
@@ -2393,7 +2202,7 @@ function hitungNilaiPapan(){
 
 
 /* =========================================================
-CEK JAWABAN
+   CEK JAWABAN
 ========================================================= */
 
 function cekJawaban(){
@@ -2484,7 +2293,7 @@ function cekJawaban(){
 
 
 /* =========================================================
-JELASKAN OPERASI
+   JELASKAN OPERASI
 ========================================================= */
 
 function jelaskanOperasi(){
@@ -2503,7 +2312,7 @@ function jelaskanOperasi(){
 
 
 /* =========================================================
-FORMAT NILAI
+   FORMAT NILAI
 ========================================================= */
 
 function formatNilai(n){
@@ -2520,7 +2329,7 @@ function formatNilai(n){
 
 
 /* =========================================================
-NAMA PARTIKEL
+   NAMA PARTIKEL
 ========================================================= */
 
 function namaPartikel(type){
@@ -2533,7 +2342,7 @@ function namaPartikel(type){
 
 
 /* =========================================================
-SOAL BERIKUTNYA
+   SOAL BERIKUTNYA
 ========================================================= */
 
 function soalBerikutnya(){
@@ -2581,7 +2390,7 @@ function soalBerikutnya(){
 
 
 /* =========================================================
-RESET PAPAN
+   RESET PAPAN
 ========================================================= */
 
 function resetPapan(
@@ -2619,7 +2428,7 @@ function resetPapan(
 
 
 /* =========================================================
-UPDATE INFO
+   UPDATE INFO
 ========================================================= */
 
 function updateInfo(){
@@ -2651,7 +2460,7 @@ function updateInfo(){
 
 
 /* =========================================================
-STATUS
+   STATUS
 ========================================================= */
 
 function setStatus(
@@ -2676,7 +2485,7 @@ function setStatus(
 
 
 /* =========================================================
-LOG
+   LOG
 ========================================================= */
 
 function tulisLog(text){
@@ -2698,7 +2507,7 @@ function tulisLog(text){
 
 
 /* =========================================================
-CLAMP
+   CLAMP
 ========================================================= */
 
 function clamp(
@@ -2719,7 +2528,7 @@ function clamp(
 
 
 /* =========================================================
-MULAI
+   MULAI GAME
 ========================================================= */
 
 buatSoal();
